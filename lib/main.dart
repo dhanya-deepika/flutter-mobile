@@ -147,7 +147,6 @@ class HomePage extends StatelessWidget {
 
   HomePage({required this.classData, required this.userEmail});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -190,26 +189,18 @@ class HomePage extends StatelessWidget {
                   children: [
                     const Text(
                       "Welcome Student 👋",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    const SizedBox(height: 16),
 
-                    if (classData["image"] != null &&
-                        classData["image"].toString().isNotEmpty)
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Image.network(
-                          classData["image"],
-                          height: 180,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                    else
-                      Icon(Icons.school, size: 100, color: Colors.indigo),
+                    const SizedBox(height: 20),
 
-                    const SizedBox(height: 16),
+                    // Optional simple icon instead of image
+                    const Icon(Icons.school, size: 80, color: Colors.indigo),
+
+                    const SizedBox(height: 20),
 
                     Text(
                       classData["name"],
@@ -244,6 +235,7 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
 class DashboardPage extends StatefulWidget {
   final Map classData;
   final String userEmail;
