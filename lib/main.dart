@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/* ---------------- LOGIN PAGE ---------------- */
 
-class LoginPage extends StatefulWidget {
+
+class LoginPage extends StatefulWidget {    /*LOGIN PAGE */
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -139,9 +139,9 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
- /* ---------------- HOME PAGE ---------------- */
 
-class HomePage extends StatelessWidget {
+
+class HomePage extends StatelessWidget {     /* HOME PAGE */
   final Map classData;
   final String userEmail;
 
@@ -197,7 +197,7 @@ class HomePage extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    // Optional simple icon instead of image
+                    
                     const Icon(Icons.school, size: 80, color: Colors.indigo),
 
                     const SizedBox(height: 20),
